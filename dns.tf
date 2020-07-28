@@ -1,6 +1,5 @@
 data "aws_route53_zone" "selected" {
-  name         = "smartdevops.net."
-  private_zone = true
+  name = "smartdevops.net."
 }
 
 resource "aws_route53_record" "pi" {
