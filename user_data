@@ -1,0 +1,10 @@
+#!/bin/bash
+yum update -y
+amazon-linux-extras install ansible2
+yum install git -y
+mkdir /opt
+cd /opt
+ansible-galaxy install thiagoalmeidasa.aws_efs
+git clone https://github.com/Arithorn/ansible-pimonitoring.git
+cd ansible-pimonitoring
+ansible-playbook -i hosts site.yml
